@@ -1,0 +1,19 @@
+Project Overview
+
+The client is a company called Globoticket, and they sell tickets for events such as concerts.
+Currently their systems are using a legacy system where part of the data is stored in a database, 
+the database howver contains only part of the data, the other part of the data is stored in so-called 
+frontmatter files, represented here by the YAML file icon. 
+That means that we also have text files that contains other things like the name of the event, the artist,
+a description, and more. So for every product to get all information, we need to consult both 
+databases and find the correct frontmatter file with extra data and then combine that. 
+Currently, their website but also their other systems like billing connect to two different data 
+sources to gather everything they need. Instead, they would like us to build a REST API, 
+which connects to both data sources and presents a unified interface.
+The client has plans to create a new website and a mobile app and maybe more things in the future,
+ and they want to be independent of the actual technology used to store the data.
+Instead, all systems should just talk to the REST API and be independent of the rest.
+That way, they can decide to change the way the data is stored, maybe by moving everything into a 
+database or use cloud storage without having to change any of the front‑end systems. 
+Those will only depend on the API. And when something changes in the data storage, 
+we would only have to update the API.
